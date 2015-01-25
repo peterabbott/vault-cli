@@ -1,7 +1,6 @@
 lanuage: ruby
 bundler_args: --without kitchen_docker --without development
 rvm:
-- 1.9.3
 - 2.1.0
 script:
 - bundle exec thor :ci
