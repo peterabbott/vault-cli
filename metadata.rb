@@ -13,3 +13,12 @@ end
 
 depends 'ark'
 depends 'java'
+
+%w{
+  ubuntu
+}.each do |os|
+  supports os
+end
+
+sugggests 'windows'
+
