@@ -1,23 +1,21 @@
 vault-cli Cookbook
 ==================
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+[![Build Status](https://travis-ci.org/peterabbott/vault-cli.svg?branch=delete)](https://travis-ci.org/peterabbott/vault-cli)
+
+Install vault cli on a node
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+Tested on 
+- Ubuntu 12.04
+- Ubuntu 14.04
+- Centos 6.4
 
-e.g.
-#### packages
-- `toaster` - vault-cli needs toaster to brown your bagel.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
 
-e.g.
 #### vault-cli::default
 <table>
   <tr>
@@ -26,34 +24,16 @@ e.g.
     <th>Description</th>
     <th>Default</th>
   </tr>
-  <tr>
-    <td><tt>['vault-cli']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
 </table>
 
 Usage
 -----
 #### vault-cli::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
-Just include `vault-cli` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[vault-cli]"
-  ]
-}
-```
+Installs vault cli using the ark recipe
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
 e.g.
 1. Fork the repository on Github

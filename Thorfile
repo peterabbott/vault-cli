@@ -25,8 +25,14 @@ class Default < Thor
     exit(10) unless success
   end
 
-   desc 'kitchen', 'Run test-kitchen'
+  desc 'kitchen', 'Run test-kitchen'
   def kitchen
     # TODO
+  end
+
+  desc 'ci', 'CI Tasks'
+  def ci
+    invoke "rubocop"
+    invoke "foodcritic"
   end
 end
