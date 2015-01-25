@@ -4,6 +4,7 @@ rvm:
 - 2.1.0
 - 2.0.0
 - ruby-head
+cache: bundler
 script:
 - bundle exec thor :ci
 matrix:
@@ -11,8 +12,4 @@ matrix:
   - rvm: ruby-head
 branches:
   except:
-  - "/^v[0-9]/"
-env:
-  global:
-    secure: LGnDXx6RhRtn0KLWkw/BlVH1BH2a/vw3b+kDqBmD7PTIk72pepH2dAGxcTn7FHLvtKlIpeXDOgZWJJNQg2i+GuUrWPQsnE2LzcWIXKD8kfJ3tKpukPXCNxn13vtfvIYfB7zp4Sshy5Ss5AsfBkEHR9vV3b5vSTmDfecRciAPS4w=
-before_install:
+  - "/^[0-9]/"

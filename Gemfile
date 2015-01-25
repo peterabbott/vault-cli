@@ -41,6 +41,6 @@ group :development do
   gem 'guard-rubocop'
 end
 
-group :travis do 
+group :travis do
   gem 'travis', '~> 1.7'
-end 
+end

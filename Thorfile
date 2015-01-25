@@ -34,15 +34,15 @@ class Default < Thor
   def ci
     invoke "rubocop"
     invoke "foodcritic"
-    
-    ThorSCMVersion::Tasks.new.bump("patch")
-
-    invoke "publish"
   end
 
   desc 'publish', 'Publish cookbook to supermarket.getchef.com'
   def publish
+    invoke "ci"
+
     require 'stove/cli'
+
+    ThorSCMVersion::Tasks.new.bump("patch")
 
     # Make sure that the VERSION file exists and is accurate.
     ThorSCMVersion::Tasks.new.current

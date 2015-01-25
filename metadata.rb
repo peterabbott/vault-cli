@@ -14,11 +14,8 @@ end
 depends 'ark'
 depends 'java'
 
-%w{
-  ubuntu
-}.each do |os|
+%w(ubuntu, centos).each do |os|
   supports os
 end
 
 sugggests 'windows'
-
