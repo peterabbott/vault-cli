@@ -37,12 +37,10 @@ class Default < Thor
   end
 
   desc 'publish', 'Publish cookbook to supermarket.getchef.com'
+  method_options 'username' => :string, :required => true, 'desc' => 'Chef Supermarket username'
+  method_options 'key' => :string, :required => true, 'desc' => 'Path to client.pem associated with Chef Supermarket'
   def publish
-    invoke "ci"
-
     require 'stove/cli'
-
-    ThorSCMVersion::Tasks.new.bump("patch")
 
     # Make sure that the VERSION file exists and is accurate.
     ThorSCMVersion::Tasks.new.current
@@ -50,9 +48,9 @@ class Default < Thor
     stove_opts = [
       '--no-git',
       '--username',
-      ENV['OPSCODE_USERNAME'],
+      options['username'],
       '--key',
-      ENV['OPSCODE_CLIENT_PEM']
+      options['key']
     ]
     Stove::Cli.new(stove_opts).execute!
   end
