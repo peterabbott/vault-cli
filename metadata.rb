@@ -12,5 +12,4 @@ else
 end
 
 depends 'ark'
-
-suggests 'java'
+depends 'java'

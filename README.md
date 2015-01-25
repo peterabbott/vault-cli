@@ -12,7 +12,6 @@ Tested on
 - Ubuntu 14.04
 - Centos 6.4
 
-
 Attributes
 ----------
 
@@ -30,7 +29,7 @@ Usage
 -----
 #### vault-cli::default
 
-Installs vault cli using the ark recipe
+Installs vault cli using the ark recipe to install cross-platform
 
 Contributing
 ------------
