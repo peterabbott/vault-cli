@@ -17,5 +17,3 @@ depends 'java'
 %w(ubuntu, centos).each do |os|
   supports os
 end
-
-sugggests 'windows'
