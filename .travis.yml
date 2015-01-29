@@ -1,6 +1,8 @@
 lanuage: ruby
 bundler_args: "--deployment --without kitchen_docker --without development --jobs 5"
-cache: bundler
+cache:
+  directories:
+  - vendor/bundle
 rvm:
 - 2.1.0
 - 2.0.0
