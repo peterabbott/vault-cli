@@ -10,6 +10,5 @@ script:
 matrix:
   allow_failures:
   - rvm: ruby-head
-branches:
-  except:
-  - "/^[0-9]/"
+after_success:
+  - if [[ $TRAVIS_BRANCH =~ [0-9]?.[0-9]+.[0-4]+ ]] && !$TRAVIS_PULL_REQUEST ]]; echo "deploy"; fi

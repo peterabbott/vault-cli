@@ -26,8 +26,9 @@ group :kitchen_docker do
 end
 
 group :ci do
-  gem 'stove', '= 3.2.3'
+  #gem 'stove', '= 3.2.3'
   gem 'thor-scmversion', '= 1.7.0'
+  gem 'dpl'
 end
 
 group :development do
