@@ -3,7 +3,6 @@ machine:
   ruby:
     version:
      2.2.4
-
 dependencies:
   bundler:
     without: [production,  kitchen_vagrant, kitchen_cloud, development  ] 
@@ -16,4 +15,4 @@ deployment:
   production:
     branch: master 
     commands:
-      - bundle exec thor stove
+      - bundle exec thor stove --username $STOVE_USERNAME
