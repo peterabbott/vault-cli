@@ -18,5 +18,4 @@ depends 'java'
   supports os
 end
 
-#sugggests 'windows'
-
+# sugggests 'windows'
