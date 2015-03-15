@@ -1,0 +1,14 @@
+machine:
+  # Version of ruby to use
+  ruby:
+    version:
+     2.2.4
+
+dependencies:
+  bundler:
+    without: [production,  kitchen_vagrant, kitchen_cloud, development  ] 
+
+test:
+  override:
+    - bundle exec thor ci
+    - bundle exec thor kitchen
