@@ -1,4 +1,7 @@
 machine:
+  services:
+    - docker
+
   # Version of ruby to use
   ruby:
     version:
@@ -10,7 +13,7 @@ dependencies:
 test:
   override:
     - bundle exec thor ci
-    - bundle exec thor kitchen
+    - bundle exec kitchen test
 deployment:
   production:
     branch: master 
