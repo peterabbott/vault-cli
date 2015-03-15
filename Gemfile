@@ -22,7 +22,8 @@ group :kitchen_vagrant do
 end
 
 group :kitchen_docker do
-  gem 'kitchen-docker', '~> 1.7.0'
+  #gem 'kitchen-docker', '~> 1.7.0'
+  gem 'kitchen-docker', :git => 'https://github.com/peterabbott/kitchen-docker.git' 
 end
 
 group :ci do
