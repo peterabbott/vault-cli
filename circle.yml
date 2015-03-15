@@ -12,3 +12,8 @@ test:
   override:
     - bundle exec thor ci
     - bundle exec thor kitchen
+deployment:
+  production:
+    branch: master 
+    commands:
+      - bundle exec thor stove
