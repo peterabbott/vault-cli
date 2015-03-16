@@ -37,25 +37,20 @@ class Default < Thor
   end
 
   desc 'publish', 'Publish cookbook to supermarket.getchef.com'
-  method_options 'username' => :string, :required => true, :desc => 'Chef Supermarket username'
-  method_options 'client_pem' => :string, :required => true, :desc => 'Path to client.pem associated with Chef Supermarket'
+  method_options 'username' => :string, :required => true, 'desc' => 'Chef Supermarket username'
+  method_options 'key' => :string, :required => true, 'desc' => 'Path to client.pem associated with Chef Supermarket'
   def publish
-    # invoke "ci"
     require 'stove/cli'
+
     # Make sure that the VERSION file exists and is accurate.
     ThorSCMVersion::Tasks.new.current
-
-    unless options['client_pem']
-      say '--client_pem is required', :red
-      exit 20
-    end
 
     stove_opts = [
       '--no-git',
       '--username',
       options['username'],
       '--key',
-      options['client_pem']
+      options['key']
     ]
     Stove::Cli.new(stove_opts).execute!
   end

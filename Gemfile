@@ -22,12 +22,13 @@ group :kitchen_vagrant do
 end
 
 group :kitchen_docker do
-  gem 'kitchen-docker', '~> 1.7.0'
+  # gem 'kitchen-docker', '~> 1.7.0'
+  gem 'kitchen-docker', 'git' => 'https://github.com/peterabbott/kitchen-docker.git'
 end
 
 group :ci do
-  gem 'stove', '= 3.2.3'
-  gem 'thor-scmversion', '= 1.7.0'
+  gem 'stove', '~> 3.2.4'
+  gem 'thor-scmversion', '~> 1.7.0'
 end
 
 group :development do
@@ -39,4 +40,8 @@ group :development do
   gem 'guard-foodcritic'
   gem 'guard-rspec'
   gem 'guard-rubocop'
+end
+
+group :travis do
+  gem 'travis', '~> 1.7'
 end

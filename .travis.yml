@@ -1,6 +1,15 @@
 lanuage: ruby
-bundler_args: --without kitchen_docker --without development
+bundler_args: "--deployment --without kitchen_docker --without development --jobs 5"
+cache: bundler
 rvm:
 - 2.1.0
+- 2.0.0
+- ruby-head
 script:
 - bundle exec thor :ci
+matrix:
+  allow_failures:
+  - rvm: ruby-head
+branches:
+  except:
+  - "/^[0-9]/"

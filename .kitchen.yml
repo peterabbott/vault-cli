@@ -10,6 +10,9 @@ platforms:
   - name: ubuntu-14.04
   - name: centos-6.4
 
+busser:
+  sudo: false
+
 suites:
   - name: default
     run_list:
