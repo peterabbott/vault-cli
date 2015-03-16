@@ -2,6 +2,7 @@ vault-cli Cookbook
 ==================
 
 [![Build Status](https://travis-ci.org/peterabbott/vault-cli.svg)](https://travis-ci.org/peterabbott/vault-cli)
+[![Circle CI](https://circleci.com/gh/peterabbott/vault-cli.png?style=badge)](https://circleci.com/gh/peterabbott/vault-cli)
 
 Install vault cli on a node
 
