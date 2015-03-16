@@ -14,7 +14,7 @@ dependencies:
 test:
   override:
     - bundle exec thor ci
-    - echo bundle exec kitchen verify 
+    - bundle exec kitchen test 
 deployment:
   production:
     branch: master 
