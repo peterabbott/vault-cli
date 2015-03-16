@@ -20,4 +20,4 @@ deployment:
     branch: master 
     commands:
       - bundle exec thor version:bump patch 
-      - bundle exec thor publish --username $STOVE_USERNAME --key $STOVE_KEYFILE
+      - bundle exec stove --username $STOVE_USERNAME --key $STOVE_KEYFILE --no-git
