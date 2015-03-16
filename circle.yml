@@ -20,6 +20,6 @@ deployment:
     branch: master 
     commands:
       - git config --global user.name "$CIRCLE_USERNAME"
-      - git config --global user.email ""
+      - git config --global user.email "$CIRCLE_USERNAME"
       - bundle exec thor version:bump patch 
       - bundle exec stove --username $STOVE_USERNAME --key $STOVE_KEYFILE --no-git
